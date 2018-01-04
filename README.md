@@ -4,7 +4,7 @@ This project show the use of images as functions that return a color for a point
 
 The project is describe here : https://github.com/vialette/fimage-squeleton
 
-(Dec. 2017)
+Student : Adrien Turiot (Dec. 2017)
 
 ## Getting Started 
 
