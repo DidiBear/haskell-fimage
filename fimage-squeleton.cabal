@@ -1,0 +1,50 @@
+Name:                fimage
+Version:             0.1.0.0
+-- synopsis:
+-- description:
+License:             MIT
+License-File:        LICENSE
+Author:              Stéphane Vialette
+Maintainer:          vialette@u-pem.fr
+-- copyright:
+Category:            Math
+Build-Type:          Simple
+Extra-Source-Files:  README.md
+Cabal-Version:       >=1.22
+
+-- -Wall -Werror -O2
+Library
+  ghc-options: -Wall -Werror -O2
+  Default-Language: Haskell2010
+  Hs-Source-Dirs: src
+  Build-Depends: base >= 4.8
+               , bytestring >= 0.10
+               , containers >= 0.5
+               , bmp >= 1.2
+  Exposed-Modules: Data.FImage.Algebra
+                 , Data.FImage.Lift
+                 , Data.FImage.Geometry
+                 , Data.FImage.Geometry.Point
+                 , Data.FImage.Geometry.PolarPoint
+                 , Data.FImage.Geometry.Vector
+                 , Data.FImage.Image
+                 , Data.FImage.Color
+                 , Data.FImage.BImage.Simple
+                 , Data.FImage.BImage.Gallery
+                 , Data.FImage.Interval
+                 , Data.FImage.Render
+                 , Data.FImage.Transform
+                 , Data.FImage.View
+                 , Data.FImage.Window
+  Other-Modules:
+
+--
+Executable fimage
+  Main-Is: FImage.hs
+  Hs-Source-Dirs: src
+  ghc-options: -Wall -Werror -O2
+  Default-Language: Haskell2010
+  Build-Depends: base >= 4.8
+               , bytestring >= 0.10
+               , containers >= 0.5
+               , bmp >= 1.2
