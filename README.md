@@ -23,6 +23,19 @@ Compile and launch :
 ![oblivion](/images/oblivion.bmp)
 ![sun](/images/sun.bmp)
 
+We can create video by creating all the frames.
+For example with this code 
+
+```haskell
+let images = [Image.gradient x Color.green Color.black | x <- [-1,-0.9..10]]
+let names = [show n ++ ".bmp" | n <- [1..(length images)]]
+F.mapM_ (write v w) (zip names images)
+```
+We merge the image sequence with another tool, see [Convert an image sequence to a movie](http://www.andrewnoske.com/wiki/Convert_an_image_sequence_to_a_movie)
+
+At the end, we have [this video](/videos/video.avi).
+
+
 ## Thing added from the squeleton 
 
 - The implementation of the default functions
